@@ -20,7 +20,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 1em 2em;
+    padding: 1em;
     background-color: #4caf50;
     color: white;
 }
@@ -55,6 +55,11 @@ nav a {
     transition: background-color 1000ms linear; 
     /* Add something here so that there is a transition on the background color    */
 }
+.cta a img{
+       width: 20px;
+        height: 20px; 
+        margin-right: 0.5em; 
+    }
 
 /* Add something hear for changing the color on hover */
 
