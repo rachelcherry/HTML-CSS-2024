@@ -56,11 +56,11 @@ nav a {
 
 /* Add something hear for changing the color on hover */
 
-.apple:hover {
+.applebutton:hover {
     background-color: #4caf50;
     color: black; 
   }
-  .android:hover {
+  .androidbutton:hover {
     background-color: #4caf50;
     color: black; 
   }
