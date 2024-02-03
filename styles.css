@@ -56,26 +56,15 @@ nav a {
 
 /* Add something hear for changing the color on hover */
 
-button1:hover {
+.apple:hover {
     background-color: #4caf50;
     color: black; 
   }
-  button2:hover {
+  .android:hover {
     background-color: #4caf50;
     color: black; 
   }
-  button1 {
-    background-color: black;
-    color: white;
-    text-align: center;
-    margin-right: 300px;
-  }
-  button2 {
-    background-color: black;
-    text-align: center;
-    color: white;
-    margin-right: 200px;
-  }
+
 /* Footer */
 footer {
     padding: 1em;
