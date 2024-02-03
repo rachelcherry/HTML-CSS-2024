@@ -6,6 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
+  
 /* Green color theme */
 .green-bg {
     background-color: #4caf50;
@@ -55,7 +56,26 @@ nav a {
 
 /* Add something hear for changing the color on hover */
 
-
+button1:hover {
+    background-color: #4caf50;
+    color: black; 
+  }
+  button2:hover {
+    background-color: #4caf50;
+    color: black; 
+  }
+  button1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-right: 300px;
+  }
+  button2 {
+    background-color: black;
+    text-align: center;
+    color: white;
+    margin-right: 200px;
+  }
 /* Footer */
 footer {
     padding: 1em;
@@ -82,6 +102,8 @@ footer {
 
 .btn-logo {
     /*Add some CSS to control the height and width of the logo */
+    width: 20px;
+    height: 20px;
     margin-right: 0.5em; /* Adds some space between the logo and the button text */
     vertical-align: middle; /* Aligns the logo with the text */
 }
