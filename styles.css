@@ -51,6 +51,8 @@ nav a {
     padding: 0.5em 1em;
     border: 1px solid #4caf50;
     background-color: #333;
+    transition: width 2s;
+    transition: background-color 1000ms linear; 
     /* Add something here so that there is a transition on the background color    */
 }
 
