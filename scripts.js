@@ -4,13 +4,15 @@ This event is when all the elements of the page have rendered by the browser.
 You do not need to modify the definition of this event  listener
  */
 document.addEventListener('DOMContentLoaded', function () {
+    ('applebutton').addEventListener("click", handleJoinClick)
+    ('androidbutton').addEventListener("click", handleJoinClick)
     /**
      * This function should be attached to the event of a user click one of the iOS or Android buttons
      * @param platform a string representing which button ie platform called this function
      */
     function handleJoinClick(platform) {
         const userEmail = prompt(`Please enter your email to be notified when Spark! Bytes is ready for ${platform}:`);
-
+       
         if (userEmail) {
             console.log(`User email for ${platform}: ${userEmail}`);
             alert(`Thank you! We will notify you at ${userEmail} when Spark! Bytes is ready for ${platform}.`);
