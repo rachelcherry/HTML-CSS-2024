@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ('applebutton').addEventListener("click", handleJoinClick)
     ('androidbutton').addEventListener("click", handleJoinClick)
     /**
-     * This function should be attached to the event of a user click one of the iOS or Android buttons
+     * This function should be attached to the ezvent of a user click one of the iOS or Android buttons
      * @param platform a string representing which button ie platform called this function
      */
     function handleJoinClick(platform) {
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (userEmail) {
             console.log(`User email for ${platform}: ${userEmail}`);
             alert(`Thank you! We will notify you at ${userEmail} when Spark! Bytes is ready for ${platform}.`);
+            const email = document.querySelector(userEmail)
             /*
             You will need to add more code here that will also add the users email to the list
             titled "users who've signed up"
