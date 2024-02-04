@@ -16,7 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (userEmail) {
             console.log(`User email for ${platform}: ${userEmail}`);
             alert(`Thank you! We will notify you at ${userEmail} when Spark! Bytes is ready for ${platform}.`);
-            const email = document.querySelector(userEmail)
+            const email = document.querySelector('ul')
+            const listItem = document.createElement('li');
+            listItem.appendChild(userEmail)
+
             /*
             You will need to add more code here that will also add the users email to the list
             titled "users who've signed up"
