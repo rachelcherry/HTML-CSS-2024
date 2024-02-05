@@ -18,14 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
             You will need to add more code here that will also add the users email to the list
             titled "users who've signed up"
              */
-            const email = document.querySelector('ul')
+            const emailList = document.querySelector('emailList');
             const listItem = document.createElement('li');
-            listItem.appendChild(userEmail)
+            listItem.textContent = userEmail;
+            emailList.appendChild(listItem)
         } else {
             alert('No email provided. Please try again if you wish to be notified.');
         }
     }
-
+    const AppleButton = document.getElementById("applebutton");
+        AppleButton.addEventListener('click', handleJoinClick("Apple"));
     /*
     Add an event listener for the iOS Button
      */
@@ -35,7 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
     Add an event listener for the Android Button
      */
 
-
+    const AndroidButton = document.getElementById("applebutton");
+        AndroidButton.addEventListener('click', handleJoinClick("Android"));
     /*
     Below here you can add code for what happens when the user clicks "Sign Up"
     The general flow you should follow is the following:
