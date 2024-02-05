@@ -21,24 +21,29 @@ document.addEventListener('DOMContentLoaded', function () {
             const emailList = document.querySelector('emailList');
             const listItem = document.createElement('li');
             listItem.textContent = userEmail;
-            emailList.appendChild(listItem)
+            emailList.appendChild(listItem);
+
         } else {
             alert('No email provided. Please try again if you wish to be notified.');
         }
     }
-    const AppleButton = document.getElementById("applebutton");
-        AppleButton.addEventListener('click', handleJoinClick("Apple"));
+
     /*
     Add an event listener for the iOS Button
      */
-
+    const AppleButton = document.getElementById('.applebutton');
+    AppleButton.addEventListener('click', function () {
+        handleJoinClick("Apple");
+    });
 
     /*
     Add an event listener for the Android Button
      */
 
-    const AndroidButton = document.getElementById("applebutton");
-        AndroidButton.addEventListener('click', handleJoinClick("Android"));
+    const AndroidButton = document.getElementById('.applebutton');
+    AndroidButton.addEventListener('click', function () {
+        handleJoinClick("Apple");
+    });
     /*
     Below here you can add code for what happens when the user clicks "Sign Up"
     The general flow you should follow is the following:
@@ -52,6 +57,23 @@ document.addEventListener('DOMContentLoaded', function () {
      Help 2: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
      Help 3: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
      */
+
+  const form = document.getElementById('signUp');
+  form.addEventListener('submit', function(event){/* from Mozilla */
+      event.preventDefault();
+      const email = document.getElementById('emailRead');
+      const inputEmail = email.value;
+      if (inputEmail) {
+        const emailList = document.querySelector('emailList');
+        const listItem = document.createElement('li');
+        listItem.textContent = inputEmail;
+        emailList.appendChild(listItem);
+        email.value = '';
+    } else {
+        alert('No email provided. Please try again if you wish to be notified.');
+    }
+});
+    
 });
 
 
