@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
      * @param platform a string representing which button ie platform called this function
      */
     function handleJoinClick(platform) {
+        console.log(`handleJoinClick function called for ${platform}`);
         const userEmail = prompt(`Please enter your email to be notified when Spark! Bytes is ready for ${platform}:`);
 
         if (userEmail) {
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             You will need to add more code here that will also add the users email to the list
             titled "users who've signed up"
              */
-            const emailList = document.querySelector('emailList');
+            const emailList = document.querySelector('#emailList');
             const listItem = document.createElement('li');
             listItem.textContent = userEmail;
             emailList.appendChild(listItem);
@@ -26,23 +27,28 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             alert('No email provided. Please try again if you wish to be notified.');
         }
+       
     }
+    
 
     /*
     Add an event listener for the iOS Button
      */
-    const AppleButton = document.getElementById('.applebutton');
+    const AppleButton = document.getElementById('applebutton');
     AppleButton.addEventListener('click', function () {
         handleJoinClick("Apple");
+        event.preventDefault();
     });
+    
 
     /*
     Add an event listener for the Android Button
      */
 
-    const AndroidButton = document.getElementById('.applebutton');
+    const AndroidButton = document.getElementById('androidbutton');
     AndroidButton.addEventListener('click', function () {
-        handleJoinClick("Apple");
+        handleJoinClick("Android");
+        event.preventDefault();
     });
     /*
     Below here you can add code for what happens when the user clicks "Sign Up"
@@ -59,12 +65,12 @@ document.addEventListener('DOMContentLoaded', function () {
      */
 
   const form = document.getElementById('signUp');
-  form.addEventListener('submit', function(event){/* from Mozilla */
+  const email = document.getElementById('emailRead');
+  form.addEventListener('submit', (event) => { /* from Mozilla */
       event.preventDefault();
-      const email = document.getElementById('emailRead');
       const inputEmail = email.value;
       if (inputEmail) {
-        const emailList = document.querySelector('emailList');
+        const emailList = document.querySelector('#emailList');
         const listItem = document.createElement('li');
         listItem.textContent = inputEmail;
         emailList.appendChild(listItem);
@@ -72,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         alert('No email provided. Please try again if you wish to be notified.');
     }
+   
 });
     
 });
